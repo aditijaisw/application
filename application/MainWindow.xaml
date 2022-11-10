@@ -1,0 +1,203 @@
+﻿<Window x:Class="application.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:application"
+        mc:Ignorable="d"
+       Title="MainWindow" Height="900" Width="1800">
+    <Grid>
+
+        <Grid Background="#FFD6D6D6" Margin="0,0,0,-146">
+            <Grid Margin="0,50,0,705" HorizontalAlignment="Center" Background="#bccbe3" Width="1780">
+                <Label FontSize="25" Content="WELCOME" HorizontalAlignment="Left" Margin="338,0,0,0"/>
+                <Label Background="#bccbe3" Margin=" 469,0,500,0" >
+                    <TextBlock FontSize="25"  Text="" x:Name="username" Margin="0,0,0,0"/>
+                </Label>
+                <Image HorizontalAlignment="Right" Margin="0,5,255,5" Source="D:\wpf\ApplicationDesktop\ApplicationDesktop\image\icons8_shutdown_24px.png" />
+            </Grid>
+            <Grid x:Name="PanelHeader" VerticalAlignment="Top" Height="50" Background="#2892b5" MouseDown="PanelHeader_MouseDown">
+            </Grid>
+            <!--expiry date-->
+            <Grid Background="White" Margin="40,91,950,500">
+                <Image Source="D:\wpf\expiry\expiry\img\icons8_key_32px.png" Margin="-27,0,110,126" />
+                <Label Margin="130,15,0,10">
+                    <TextBlock FontSize="10" TextWrapping="Wrap" Width="361" Height="194">
+                     Your password expires
+                     <LineBreak/>
+                     on
+                    </TextBlock>
+                </Label>
+                <TextBlock FontSize="15" Margin="130,146,0,10">
+
+                  <Button Click="Button_Click_1" Background="White" Content="Manage my password"></Button>
+                </TextBlock>
+            </Grid>
+            <!--ip address-->
+            <Grid Background="White" Margin="340,91,600,500" >
+                <Image Margin="9,5,194,146" Source="D:\wpf\ipaddress\ipaddress\image\checked-laptop--v3.png" />
+                <Label x:Name="xyz" FontSize="15" Content="Your IP address is" HorizontalAlignment="Left" Margin="164,0,0,0" VerticalAlignment="Top" Width="260" Height="72" Loaded="Label"/>
+                <TextBlock FontSize="15" Margin="164,21,10,162" x:Name="abc"/>
+                <Label FontSize="13" Foreground="#288dcd" HorizontalAlignment="Left" Content="Manage My Network Connection" Margin="90,63,0,10" Width="440"/>
+                <Label Content="User Name" FontSize="10" HorizontalAlignment="Left" Margin="29,110,0,0" VerticalAlignment="Top" Width="122" Height="25"/>
+                <Label Content="Operating System" FontSize="10" HorizontalAlignment="Left" Margin="29,186,0,0" VerticalAlignment="Top" Width="122" Height="25"/>
+                <Label Content="Installation Date" FontSize="10" HorizontalAlignment="Left" Margin="29,130,0,0" VerticalAlignment="Top" Width="116" Height="27"/>
+                <Label Content="Master Version" FontSize="10" HorizontalAlignment="Left" Margin="29,150,0,0" VerticalAlignment="Top" Width="115" Height="35"/>
+                <Label Content="Machine Name" FontSize="10" HorizontalAlignment="Left" Margin="29,170,0,0" VerticalAlignment="Top" Width="116" Height="40"/>
+                <TextBlock FontSize="10" Foreground="#288dcd" HorizontalAlignment="Left" Margin="168,110,0,0" Text="" x:Name="user" VerticalAlignment="Top" Height="40" Width="174"/>
+                <TextBlock FontSize="10" Foreground="#288dcd" HorizontalAlignment="Left" Margin="168,190,0,0" Text="" x:Name="osversion" VerticalAlignment="Top" Height="40" Width="174"/>
+                <TextBlock FontSize="10" Foreground="#288dcd" HorizontalAlignment="Left" Margin="168,130,0,0" Text="" x:Name="date" VerticalAlignment="Top" Height="40" Width="104"/>
+                <TextBlock FontSize="10" Foreground="#288dcd" HorizontalAlignment="Left" Margin="168,150,0,0" Text="" x:Name="version" VerticalAlignment="Top" Height="40" Width="160"/>
+                <TextBlock FontSize="10" Foreground="#288dcd" HorizontalAlignment="Left" Margin="168,170,0,0" Text="" x:Name="machine" VerticalAlignment="Top" Height="40" Width="104"/>
+            </Grid>
+            <!-- search-->
+            <Grid  Margin=" 690,91,1,500">
+                <Grid.Background>
+                    <ImageBrush ImageSource="D:\wpf\ApplicationDesktop\ApplicationDesktop\image\download (1).jpeg"/>
+                </Grid.Background>
+                <Image HorizontalAlignment="Right" Source="D:\wpf\ApplicationDesktop\ApplicationDesktop\image\search_32px.png" VerticalAlignment="Top" Height="30" Width="30" Margin="0,13,460,100"  />
+                <Label Content="Search for software" FontWeight="Bold" FontSize="19" Foreground="White" Margin="130,10,0,100"/>
+                <TextBlock Background="White" Text=" picture, crome" Margin="130,40,0,130" ></TextBlock>
+            </Grid>
+            <!--Software-->
+            <Grid Height="984" VerticalAlignment="Top" HorizontalAlignment="Left" Width="1580">
+                <!--bios and drivers-->
+                <Label  Margin="340,310,900,500" Background="white" >
+                    <Grid Width="330">
+                        <Image Height="50" Width="50" Source="D:\wpf\software\software\image\icons8_bios_32px.png" Margin="10,0,100,10" HorizontalAlignment="Left" />
+                        <Label Margin="80,10,30,20" FontSize="19" Content="Bios and Drivers"/>
+                        <Label FontWeight="Bold" Foreground="#83eb34" Margin="80,1,10,33" FontSize="15" Content="needs to be updated" Grid.Row="1"/>
+                        <Button Content="Update my drivers"  Background="#83eb34" Foreground="white" FontSize="15" Margin="10,39,10,0" Grid.Row="1"/>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="11*"/>
+                            <RowDefinition Height="10*"/>
+                        </Grid.RowDefinitions>
+                    </Grid>
+                </Label>
+                <!--software library-->
+                <Label  Margin="40,310,1250,500" Background="White" >
+                    <Grid >
+                        <Image Height="50" Width="50" Source="D:\wpf\software\software\image\icons8_software_40px.png" Margin="10,0,100,10" HorizontalAlignment="Left" />
+                        <Label Margin="80,10,30,20" FontSize="19" Content="Software Library"/>
+                        <Label FontWeight="Bold" Foreground="#83eb34" Margin="80,1,10,33" FontSize="15" Content="needs to be updated" Grid.Row="1"/>
+                        <Button Content="See my software"  Background="#83eb34" Foreground="white" FontSize="15" Margin="10,39,10,0" Grid.Row="1"/>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="11*"/>
+                            <RowDefinition Height="10*"/>
+                        </Grid.RowDefinitions>
+                    </Grid>
+                </Label>
+                <!--backup data -->
+                <Label  Margin="690,310,571,500" Background="White" >
+                    <Grid Width="330">
+                        <Image Source="D:\wpf\software\software\image\icons8_restore_50px.png" Height="50" Width="50" Margin="10,0,100,10" HorizontalAlignment="Left" />
+                        <Label Margin="80,10,30,20" FontSize="19" Content="Data Backup"/>
+                        <Label FontWeight="Bold" Foreground="#83eb34" Margin="80,1,10,33" FontSize="15" Content="has yet been performed" Grid.Row="1"/>
+                        <Button Content="Backup my data"  Background="#83eb34" Foreground="white" FontSize="15" Margin="10,39,15,0" Grid.Row="1"/>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="11*"/>
+                            <RowDefinition Height="10*"/>
+                        </Grid.RowDefinitions>
+                    </Grid>
+                </Label>
+                <!--clean computer-->
+                <Label  Margin="1019,310,300,500" Background="White" >
+                    <Grid Width="330">
+                        <Image Source="D:\wpf\software\software\image\icons8_shower_40px.png" Height="50" Width="50" Margin="10,0,100,10" HorizontalAlignment="Left" />
+                        <Label Margin="80,10,30,20" FontSize="19" Content="Clean Computer"/>
+                        <Label FontWeight="Bold" Foreground="#83eb34" Margin="75,1,10,33" FontSize="15" Content="for disk space remaining" Grid.Row="1"/>
+                        <Button Content="Free up more spaces"  Background="#83eb34" Foreground="white" FontSize="15" Margin="10,39,15,0" Grid.Row="1"/>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="11*"/>
+                            <RowDefinition Height="10*"/>
+                        </Grid.RowDefinitions>
+                    </Grid>
+                </Label>
+                <Grid Background="white"  Margin="756,500,571,47">
+                    <Image Source="D:\wpf\dificult\dificult\img\crab_100px.png" Margin="0,0,150,368" />
+                    <Label FontSize="15" Margin="90,10,0,199" Content="Difficulties? A bug?"/>
+                    <TextBlock FontSize="15" Margin="90,90,0,199">
+                   <Hyperlink NavigateUri="http://itservices.axiscades.com/" RequestNavigate="Hyperlink">
+                  I open an incident
+                   </Hyperlink>
+                    </TextBlock>
+                </Grid>
+                <Image Margin="0,500,1100,361" Height="40" Width="40" Source="D:\wpf\ApplicationDesktop\ApplicationDesktop\image\head.jpeg" />
+                <Label Margin="300,519,956,361" Content="From internal phone"/>
+                <Image Margin="0,500,956,361" Height="19" Width="19" Source="D:\wpf\ApplicationDesktop\ApplicationDesktop\image\flag.png"/>
+                <Label Margin="130,545,956,361" FontSize="19" Content="**********" Height="100" Width="100"/>
+                <Label Margin="450,490,956,361" Content="From External phone"/>
+                <Image HorizontalAlignment="Left" Margin="450,420,956,361" Height="19" Width="19" Source="D:\wpf\ApplicationDesktop\ApplicationDesktop\image\chaina.png" />
+                <Image HorizontalAlignment="Left" Margin="450,450,956,361" Height="19" Width="19" Source="D:\wpf\header\header\image\canada.png" />
+                <Image HorizontalAlignment="Left" Margin="450,480,956,361" Height="19" Width="19" Source="D:\wpf\ApplicationDesktop\ApplicationDesktop\image\uk.png" />
+                <Image HorizontalAlignment="Left" Margin="450,510,956,361" Height="19" Width="19" Source="D:\wpf\header\header\image\germany.png" />
+                <Image HorizontalAlignment="Left" Margin="450,540,956,361" Height="19" Width="19" Source="D:\wpf\header\header\image\us.png" />
+                <Image HorizontalAlignment="Left" Margin="450,570,956,361" Height="19" Width="19" Source="D:\wpf\header\header\image\french.png" />
+                <Grid Margin="0,623,0,137" Background="#2892b5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="311*"/>
+                        <ColumnDefinition Width="182*"/>
+                        <ColumnDefinition Width="1307*"/>
+                    </Grid.ColumnDefinitions>
+                    <Image Source="D:\wpf\ApplicationDesktop\ApplicationDesktop\image\axiscades.jpeg" Margin="-7,0,1450,0" Grid.ColumnSpan="3" Height="55" VerticalAlignment="Top"  />
+                </Grid>
+                <!--menu-->
+                <Grid x:Name="sidepanel" Background="#2892b5" HorizontalAlignment="Left" Width="165">
+                    <StackPanel>
+                        <Grid Height="105" Background="#2892b5">
+                            <Button Background="#2892b5" Height="30" Margin="5,50,0,0" VerticalAlignment="Top" Click="Button_Click" HorizontalAlignment="Left">
+                                <Image Height="30" Source="D:\wpf\menu\menu\image\menu.png" Margin="0" VerticalAlignment="Top" HorizontalAlignment="Left" />
+                            </Button>
+                        </Grid>
+                        <ListView Foreground="White" FontSize="15" BorderBrush="Transparent" Background="Transparent">
+                            <ListViewItem Height="30">
+                                <StackPanel Orientation="Horizontal">
+                                    <Image Source="D:\wpf\menu\menu\image\icons8_home_16px.png" Height="19" VerticalAlignment="Center" />
+                                    <TextBlock Margin="15,0,0,0" Text="Home" VerticalAlignment="Center"/>
+                                </StackPanel>
+                            </ListViewItem>
+                            <ListViewItem Height="30">
+                                <StackPanel Orientation="Horizontal">
+                                    <Image Source="D:\wpf\menu\menu\image\icons8_software_40px.png" Height="19" VerticalAlignment="Center"/>
+                                    <TextBlock Margin="15,0,0,0" Text="Software Library" VerticalAlignment="Center"/>
+                                </StackPanel>
+                            </ListViewItem>
+                            <ListViewItem Height="30">
+                                <StackPanel Orientation="Horizontal">
+                                    <Image Source="D:\wpf\menu\menu\image\icons8_network_40px.png" Height="19" VerticalAlignment="Center"/>
+                                    <TextBlock Margin="15,0,0,0" Text="Network" VerticalAlignment="Center"/>
+                                </StackPanel>
+                            </ListViewItem>
+                            <ListViewItem Height="30">
+                                <StackPanel Orientation="Horizontal">
+                                    <Image Source="D:\wpf\menu\menu\image\icons8_printer_24px.png" Height="19" VerticalAlignment="Center" />
+                                    <TextBlock Margin="15,0,0,0" Text="Printer Services" VerticalAlignment="Center"/>
+                                </StackPanel>
+                            </ListViewItem>
+                            <ListViewItem Height="30">
+                                <StackPanel Orientation="Horizontal">
+                                    <Image Source="D:\wpf\menu\menu\image\icons8_bios_32px.png" Height="19" VerticalAlignment="Center"/>
+                                    <TextBlock Margin="15,0,0,0" Text="Bios and Drivers" VerticalAlignment="Center"/>
+                                </StackPanel>
+                            </ListViewItem>
+                            <ListViewItem Height="30">
+                                <StackPanel Orientation="Horizontal">
+                                    <Image Source="D:\wpf\menu\menu\image\icons8_restore_50px.png" Height="19" VerticalAlignment="Center" />
+                                    <TextBlock Margin="15,0,0,0" Text="User Data Backup" VerticalAlignment="Center"/>
+                                </StackPanel>
+                            </ListViewItem>
+                            <ListViewItem Height="30">
+                                <StackPanel Orientation="Horizontal">
+                                    <Image Source="D:\wpf\menu\menu\image\icons8_shower_40px.png" Height="19" VerticalAlignment="Center"/>
+                                    <TextBlock Margin="15,0,0,0" Text="Clean Computer" VerticalAlignment="Center"/>
+                                </StackPanel>
+                            </ListViewItem>
+                        </ListView>
+                    </StackPanel>
+                </Grid>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>
+
+
